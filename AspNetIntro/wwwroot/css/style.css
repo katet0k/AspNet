@@ -24,8 +24,8 @@ p {
 }
 .Name, .Where, .Study {
     width: 500px;
-    margin: 5px 0 15px 0; /* Скидає всі відступи для всіх елементів */
-    padding: 0; /* Також скидає всі відступи */
+    margin: 5px 0 15px 0;
+    padding: 0; 
 }
 .NameP {
     font-size: 14px;
@@ -47,6 +47,6 @@ hr {
     color: #3e5a62;
 }
 ul {
-    margin: 0 0 0 0; /* Скидає всі відступи для всіх елементів */
+    margin: 0 0 0 0; 
     padding: 0;
 }
