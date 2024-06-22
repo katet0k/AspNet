@@ -65,6 +65,10 @@ app.MapGet("/skils", async context =>
     "<p>C++</p>" +
     "<p>C#</p>" +
     "<p>JavaScript</p>" +
+    "<p>HTML&CSS</p>" +
+    "<p>ADO.NET, EF Core, Dapper</p>" +
+    "<p>MS SQL Server</p>" +
+    "<p>Angular ³ React</p>" +
     "</ul>"
 
     + "</div>"

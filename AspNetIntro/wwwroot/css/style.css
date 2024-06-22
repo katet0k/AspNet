@@ -46,3 +46,7 @@ hr {
 .Interesting {
     color: #3e5a62;
 }
+ul {
+    margin: 0 0 0 0; /* Скидає всі відступи для всіх елементів */
+    padding: 0;
+}
