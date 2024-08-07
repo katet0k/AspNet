@@ -13,12 +13,12 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
-// Заповнення даними про себе та навички
+// Р—Р°РїРѕРІРЅРµРЅРЅСЏ РґР°РЅРёРјРё РїСЂРѕ СЃРµР±Рµ С‚Р° РЅР°РІРёС‡РєРё
 var aboutMe = new AboutMe
 {
     FullName = "Kostiuchenko Kateryna",
     Origin = "Vinnitsa",
-    StudyPlace = "Комп'ютерна академія Step",
+    StudyPlace = "РљРѕРјРї'СЋС‚РµСЂРЅР° Р°РєР°РґРµРјС–СЏ Step",
     Skills = new List<Skill>
     {
         new Skill { Id = 1, Name = "C++", Proficiency = 80 },
@@ -27,7 +27,7 @@ var aboutMe = new AboutMe
         new Skill { Id = 4, Name = "HTML&CSS", Proficiency = 90 },
         new Skill { Id = 5, Name = "ADO.NET, EF Core, Dapper", Proficiency = 70 },
         new Skill { Id = 6, Name = "MS SQL Server", Proficiency = 65 },
-        new Skill { Id = 7, Name = "Angular і React", Proficiency = 60 }
+        new Skill { Id = 7, Name = "Angular С– React", Proficiency = 60 }
     }
 };
 
@@ -45,24 +45,24 @@ app.MapGet("/", async context =>
         + "<img class=\"Photo\" src='img/photo1.jpeg' alt=\"no photo\">"
 
         + "<a class=\"Interesting\" href='https://github.com/katet0k'>Github.Katet0k</a>"
-        + "<a class=\"Skils\" href='/skils'>Мої навички</a>"
+        + "<a class=\"Skils\" href='/skils'>РњРѕС— РЅР°РІРёС‡РєРё</a>"
 
         + "</div>"
 
         + "<div class=\"Conteiner3\">"
 
-        + " <p class=\"NameP\">Призвище та ім'я</p><hr>"
+        + " <p class=\"NameP\">РџСЂРёР·РІРёС‰Рµ С‚Р° С–Рј'СЏ</p><hr>"
         + "<p class=\"Name\">" + aboutMe.FullName + "</p>"
 
-        + "<p class=\"NameP\">Звідки я</p><hr>"
+        + "<p class=\"NameP\">Р—РІС–РґРєРё СЏ</p><hr>"
         + "<p class=\"Where\">" + aboutMe.Origin + "</p>"
 
-        + "<p class=\"NameP\">Де навчаюсь</p><hr>"
+        + "<p class=\"NameP\">Р”Рµ РЅР°РІС‡Р°СЋСЃСЊ</p><hr>"
         + "<p class=\"Study\">" + aboutMe.StudyPlace + "</p>"
 
-        + "<p class=\"NameP\">Мої навички</p><hr>"
+        + "<p class=\"NameP\">РњРѕС— РЅР°РІРёС‡РєРё</p><hr>"
         + "<table class=\"SkillTable\">"
-        + "<tr><th>Навичка</th><th>Рівень володіння</th></tr>");
+        + "<tr><th>РќР°РІРёС‡РєР°</th><th>Р С–РІРµРЅСЊ РІРѕР»РѕРґС–РЅРЅСЏ</th></tr>");
 
     foreach (var skill in aboutMe.Skills)
     {
@@ -86,14 +86,14 @@ app.MapGet("/skils", async context =>
         + "<img class=\"Photo\" src='img/photo1.jpeg' alt=\"no photo\">"
 
         + "<a class=\"Interesting\" href='https://github.com/katet0k'>Github.Katet0k</a>"
-        + "<a class=\"Skils\" href='/'>Повернутись</a>"
+        + "<a class=\"Skils\" href='/'>РџРѕРІРµСЂРЅСѓС‚РёСЃСЊ</a>"
         + "</div>"
 
         + "<div class=\"Conteiner3\">"
 
-        + " <p class=\"NameP\">Мої навички</p><hr>"
+        + " <p class=\"NameP\">РњРѕС— РЅР°РІРёС‡РєРё</p><hr>"
         + "<table class=\"SkillTable\">"
-        + "<tr><th>Навичка</th><th>Рівень володіння</th></tr>");
+        + "<tr><th>РќР°РІРёС‡РєР°</th><th>Р С–РІРµРЅСЊ РІРѕР»РѕРґС–РЅРЅСЏ</th></tr>");
 
     foreach (var skill in aboutMe.Skills)
     {
@@ -107,7 +107,7 @@ app.MapGet("/skils", async context =>
 
 app.Run();
 
-// Модель "Навичка"
+// РњРѕРґРµР»СЊ "РќР°РІРёС‡РєР°"
 public class Skill
 {
     public int Id { get; set; }
@@ -115,7 +115,7 @@ public class Skill
     public int Proficiency { get; set; }
 }
 
-// Модель інформації про себе з колекцією навичок
+// РњРѕРґРµР»СЊ С–РЅС„РѕСЂРјР°С†С–С— РїСЂРѕ СЃРµР±Рµ Р· РєРѕР»РµРєС†С–С”СЋ РЅР°РІРёС‡РѕРє
 public class AboutMe
 {
     public string FullName { get; set; }
